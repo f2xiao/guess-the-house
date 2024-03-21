@@ -34,7 +34,7 @@ const renderEachChar = ({ name, image }) => {
 };
 
 const generateRandomNumber = () => {
-  const max = characters.length;
+  const max = characters.length - 1;
   return Math.floor(Math.random() * (max + 1));
 };
 
