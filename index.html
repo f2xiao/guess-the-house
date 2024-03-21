@@ -1,36 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="scripts/main.js" defer></script>
-    <title>Guess The House</title>
-  </head>
-  <body>
-    <header class="container container-heading">Guess the House</header>
-    <main class="game container">
-      <section class="game__characters">
-        <ul class="game__list">
 
-        </ul>
-      </section>
-      <section class="game-quiz">
-        <p class="game-quiz__question">Are they in the same house?</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="scripts/main.js" defer></script>
+  <title>Guess The House</title>
+</head>
+
+<body>
+  <header class="container container-heading">Guess the House</header>
+  <main class="game container">
+    <section class="game__characters">
+      <ul class="game__list">
+
+      </ul>
+    </section>
+    <section class="game-quiz">
+      <p class="game-quiz__question">Are they in the same house?</p>
+      <div class="game-quiz__options">
         <button data-choice="true" class="game__button game__button--yes">
           Yes
         </button>
         <button data-choice="false" class="game__button game__button--no">
           No
         </button>
-      </section>
-      <section class="game__display">
-        <p class="game__result"></p>
-      </section>
-      <section class="game__modal">
-        <p class="game__score"></p>
-      </section>
-    </main>
-  </body>
+      </div>
+    </section>
+    <section class="game__display">
+      <p class="game__result"></p>
+    </section>
+    <section class="game__modal">
+      <p class="game__score"></p>
+    </section>
+  </main>
+  <footer>
+    <div class="houseCards">
+      <!-- <img src=""> -->
+      <div class="house-crest">
+        <img class="house-crest__img"
+          src="//images.ctfassets.net/usf1vwtuqyxm/4PcgKT3VHNAUTvf7kXkdrD/2093bb06b6a9e6e74129f13c0c639932/Filled-Gryffindor.svg">
+      </div>
+      <h3>Gryffindor </h3>
+      Founded by Godric Gryffindor, this house values bravery, courage, and chivalry. Its emblematic animal is the lion,
+      symbolizing strength and leadership.
+
+    </div>
+    <div class="houseCards">
+      <!-- <img src=""> -->
+      <div class="house-crest">
+        <img class="house-crest__img"
+          src="//images.ctfassets.net/usf1vwtuqyxm/1Et1EKQhLsGiql1ZlbHShw/79b58fe13d156833a808c82b085bedfe/Filled-Hufflepuff.svg">
+      </div>
+      <h3>Hufflepuff</h3>
+      Founded by Helga Hufflepuff, this house prizes loyalty, hard work, and inclusivity. Its emblematic animal is the
+      badger, reflecting perseverance and resilience.
+
+
+    </div>
+    <div class="houseCards">
+      <!-- <img src=""> -->
+      <div class="house-crest">
+        <img class="house-crest__img"
+          src="//images.ctfassets.net/usf1vwtuqyxm/17xo05yCVo3tetTYhsgAvG/8963643ef613a74abc40a72548ddb953/Filled-Ravenclaw.svg">
+      </div>
+      <h3>Ravenclaw</h3>
+      Founded by Rowena Ravenclaw, this house celebrates wisdom, intelligence, and creativity. Its emblematic animal is
+      the eagle, representing insight and knowledge.
+
+
+    </div>
+    <div class="houseCards">
+      <!-- <img src=""> -->
+      <div class="house-crest">
+        <img class="house-crest__img"
+          src="//images.ctfassets.net/usf1vwtuqyxm/1dUgeiYSumqjTF6m8BWP1u/aa4d596be495975136ce08fe14a63e7b/Filled-Slytherin.svg">
+      </div>
+      <h3>Slytherin</h3>
+      Founded by Salazar Slytherin, this house values ambition, cunning, and resourcefulness. Its emblematic animal is
+      the serpent, symbolizing cleverness and ambition.
+    </div>
+  </footer>
+</body>
+
 </html>
