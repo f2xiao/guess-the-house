@@ -4,12 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" />
-    <script type="module" src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="scripts/main.js" defer></script>
     <title>Guess The House</title>
   </head>
   <body>
-    <header>header</header>
-    <main>main</main>
+    <header>Guess the House</header>
+    <main class="game">
+      <section class="game__characters">
+        <ul class="game__list"></ul>
+      </section>
+      <section>
+        <p>Are they in the same house?</p>
+        <button data-choice="1" class="game__button game__button--yes">
+          Yes
+        </button>
+        <button data-choice="0" class="game__button game__button--no">
+          No
+        </button>
+      </section>
+      <section class="game__display">
+        <p class="game__result"></p>
+      </section>
+    </main>
     <footer>footer</footer>
   </body>
 </html>
