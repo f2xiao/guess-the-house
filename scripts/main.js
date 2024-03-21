@@ -40,7 +40,7 @@ const generateRandomNumber = () => {
 
 const generateTwoCharacters = () => {
   const num1 = generateRandomNumber();
-  const num2 = generateRandomNumber();
+  let num2 = generateRandomNumber();
   console.log(num1);
   console.log(num2);
 
@@ -48,7 +48,6 @@ const generateTwoCharacters = () => {
     num2 = generateRandomNumber();
   }
 
-  //   return [num1, num2];
   twoCharacters = [characters[num1], characters[num2]];
 };
 
