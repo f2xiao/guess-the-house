@@ -20,8 +20,8 @@ const createNewCharEl = () => {
   const pEl = createElwClass("p", "game__name");
   const imgEl = createElwClass("img", "game__img");
 
-  liEl.appendChild(pEl);
   liEl.appendChild(imgEl);
+  liEl.appendChild(pEl);
 
   return { liEl, pEl, imgEl };
 };

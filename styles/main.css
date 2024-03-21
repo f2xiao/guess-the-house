@@ -1,1 +1,38 @@
-/*# sourceMappingURL=main.css.map */
+body {
+  background: url("../assets/HarryPotter.avif");
+  background-position: center;
+  background-size: cover;
+  font-family: cursive;
+}
+
+p {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.game__list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+img {
+  height: 22rem;
+  width: 16rem;
+}
+
+.container-heading {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.game-quiz {
+  display: flex;
+  flex-direction: column;
+}
+.game-quiz__question {
+  background: rgba(0, 0, 0, 0.5411764706);
+  color: white;
+  width: 75%;
+  margin: 0 auto;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,11 @@
+@use './mixin' as *;
+@use './variables' as *;
+
+.container{
+    margin: 0 auto;
+    padding: 2rem 3rem;
+
+    @include desktop{
+        max-width: 1280px;
+    }
+}
