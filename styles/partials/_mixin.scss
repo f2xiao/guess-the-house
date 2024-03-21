@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+@mixin mobile {
+
+    // min-width: 320px
+    @media screen and (min-width: $mobile-min-breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet {
+
+    // min-width: 768px
+    @media screen and (min-width: $tablet-min-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+
+    // min-width: 1024px
+    @media screen and (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
