@@ -7,7 +7,7 @@ class HpApi {
     try {
       const response = await axios.get(`${this.baseUrl}`);
       return response.data.filter(
-        (char) => char.house !== "" && char.image !== ""
+        (char) => char.house !== "" && char.image !== "" && char.name !== " "
       );
     } catch (err) {
       console.log(err);
