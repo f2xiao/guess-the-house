@@ -34,7 +34,7 @@ const renderEachChar = ({ name, image }) => {
 };
 
 const generateRandomNumber = () => {
-  const max = characters.length;
+  const max = characters.length - 1;
   return Math.floor(Math.random() * (max + 1));
 };
 
@@ -51,7 +51,8 @@ const generateTwoCharacters = () => {
   twoCharacters = [characters[num1], characters[num2]];
 };
 
-let twoCharacters = [characters[0], characters[1]];
+let twoCharacters = [];
+generateTwoCharacters();
 
 const renderTwoCharacters = (twoCharacters) => {
   listEl.textContent = "";
@@ -61,11 +62,13 @@ const renderTwoCharacters = (twoCharacters) => {
 
 const handleClick = (event) => {
   event.preventDefault();
+  round++;
 
-  console.log(event.target);
+  // console.log(event.target);
   console.log("before", twoCharacters);
   const sameHouse = twoCharacters[0].house === twoCharacters[1].house;
   const userChoice = event.target.dataset.choice === "true";
+
   console.log(userChoice);
   const message = sameHouse
     ? `They are in the same house: ${twoCharacters[0].house}.`
@@ -74,8 +77,24 @@ const handleClick = (event) => {
   //   check if the two characters have the same house name
   if (userChoice === sameHouse) {
     resultEl.textContent = `Congratulation! You are correct! ${message} `;
+    score++;
   } else {
     resultEl.textContent = `oh no ! ${message}`;
+  }
+
+  scoreEl.textContent = `Your Score is: ${score}/${maxRound}`;
+
+  // check how many rounds and score
+  if (round == maxRound) {
+    // buttons.forEach((button) => {
+    //   button.removeEventListener("click", handleClick);
+    // });
+    alert(`game ends, you final score is ${score} / ${maxRound}`);
+    setTimeout(function () {
+      // Refresh the window
+      window.location.reload();
+    }, 0);
+    return;
   }
 
   // generate two new characters and display them
@@ -84,12 +103,18 @@ const handleClick = (event) => {
   console.log("after", twoCharacters);
   setTimeout(() => {
     renderTwoCharacters(twoCharacters);
-  }, 4000);
+  }, 3000);
 };
 
+let round = 0;
+let score = 0;
+const maxRound = 5;
 const listEl = document.querySelector(".game__list");
 const resultEl = document.querySelector(".game__result");
+const modalEl = document.querySelector(".game__modal");
+const scoreEl = document.querySelector(".game__score");
 renderTwoCharacters(twoCharacters);
+scoreEl.textContent = `Your Score is: ${score}/${maxRound}`;
 
 const buttons = document.querySelectorAll(".game__button");
 buttons.forEach((button) => {
